@@ -32,6 +32,9 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 -- Save
 -- keymap("n", "<C-s>", ":w<CR>", opts)
 
+-- Copy
+keymap("n", "<C-c>", "\"+yy", opts)
+
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
@@ -45,6 +48,13 @@ keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Save
 -- keymap("i", "<C-s>", "<Esc>:w<CR>gi", opts)
+
+-- Copy
+keymap("i", "<C-c>", "\"+yy", opts)
+
+-- Visual
+-- Copy
+keymap("v", "<C-c>", "\"+y", opts)
 
 -- Nvimtree
 -- keymap("n", "<leader>e", ":Lex 20<CR>", opts)
